@@ -214,13 +214,13 @@ class Game {
 		let clampedX = Math.clamp(this.ball.location.x,this.paddle1.location.x - this.paddle1.width/2,this.paddle1.location.x + this.paddle1.width/2);
 		let clampedY = Math.clamp(this.ball.location.y,this.paddle1.location.y - this.paddle1.height/2,this.paddle1.location.y + this.paddle1.height/2);
 		if(this.ball.velocity.x < 0 && this.ball.location.distance(new Vector(clampedX,clampedY)) <= this.ball.radius){
-			this.ball.velocity.x *= -1.2;
+			this.ball.velocity.x *= -1.05;
 		}
 		//Paddle2
 		clampedX = Math.clamp(this.ball.location.x,this.paddle2.location.x - this.paddle2.width/2,this.paddle2.location.x + this.paddle2.width/2);
 		clampedY = Math.clamp(this.ball.location.y,this.paddle2.location.y - this.paddle2.height/2,this.paddle2.location.y + this.paddle2.height/2);
 		if(this.ball.velocity.x > 0 && this.ball.location.distance(new Vector(clampedX,clampedY)) <= this.ball.radius){
-			this.ball.velocity.x *= -1.2;
+			this.ball.velocity.x *= -1.05;
 		}
 		// debugger;
 	}
